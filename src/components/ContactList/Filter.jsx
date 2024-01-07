@@ -1,6 +1,18 @@
-// import { Component } from 'react';
-// import styles from './ContactList.module.css';
+import styles from './ContactList.module.css';
 
-function filter() {}
+const Filter = ({ value, changeFitler }) => {
+  return (
+    <>
+      <p>Find contacts by name</p>
+      <input
+        className={styles.filter}
+        onChange={changeFitler}
+        name="filter"
+        value={value}
+        placeholder="Search"
+      />
+    </>
+  );
+};
 
-export default filter;
+export default Filter;
